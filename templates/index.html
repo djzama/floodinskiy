@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Packet Sender</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <h1>Packet Sender</h1>
+    <form action="/send" method="post">
+            <label for="protocol">Protocol:</label>
+            <select id="protocol" name="protocol">
+                <option value="tcp">TCP</option>
+                <option value="udp">UDP</option>
+                <option value="icmp">ICMP</option>
+                <option value="pop3">POP3</option>
+                <option value="smtp">SMTP</option>
+                <option value="dns">DNS</option>
+            </select><br>
+            <label for="targetIP">Target IP:</label>
+            <input type="text" id="targetIP" name="targetIP"><br>
+            <label for="targetPort">Target Port:</label>
+            <input type="number" id="targetPort" name="targetPort"><br>
+            <label for="packetSize">Packet Size:</label>
+            <input type="number" id="packetSize" name="packetSize"><br>
+            <label for="packetCount">Packet Count:</label>
+            <input type="number" id="packetCount" name="packetCount"><br>
+        <input type="submit" value="Send Packets">
+    </form>
+    <div class="speedometer" id="speedometer">0 pps</div>
+    <script src="/static/speed.js"></script>
+</body>
+</html>
