@@ -28,5 +28,14 @@
     </form>
     <div class="speedometer" id="speedometer">0 pps</div>
     <script src="/static/speed.js"></script>
+    <div id="log"></div>
+    <script>
+    function appendLog(message) {
+        var logDiv = document.getElementById("log");
+        var logEntry = document.createElement("div");
+        logEntry.textContent = message;
+        logDiv.appendChild(logEntry);
+    }
+    </script>
 </body>
 </html>
